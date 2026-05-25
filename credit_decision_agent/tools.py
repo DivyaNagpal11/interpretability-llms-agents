@@ -33,9 +33,6 @@ class CreditDecisionTools:
     def _initialize_shap(self):
         """Initialize SHAP explainer with training data."""
         print("Initializing SHAP explainer...")
-        # Use a subsample for efficiency
-        # background = self.data_dict["X_train"].sample(n=100, random_state=42)
-        # self.explainer = shap.TreeExplainer(self.model, data=background)
         self.explainer = shap.TreeExplainer(self.model)
         print("SHAP explainer ready.")
 
