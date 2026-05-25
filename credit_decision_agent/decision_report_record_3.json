@@ -1,0 +1,80 @@
+{
+  "record_index": 3,
+  "actual_default": 1,
+  "customer_profile": {
+    "credit_limit": 290000.0,
+    "sex": "Female",
+    "education": "Graduate School",
+    "marriage": "Single",
+    "age": 25,
+    "recent_payment_status": "Revolving credit used",
+    "payment_history": {
+      "month_1": "Revolving credit used",
+      "month_2": "Revolving credit used",
+      "month_3": "Revolving credit used"
+    },
+    "latest_bill_amount": 305823.0,
+    "latest_payment_amount": 15000.0,
+    "credit_utilization": 1.0545620689655173,
+    "total_bill_amounts": 1627617.0,
+    "total_payment_amounts": 81677.0,
+    "missed_payments_count": 0
+  },
+  "risk_assessment": {
+    "tool": "predict_risk",
+    "timestamp": "2026-05-21T20:44:11.479804",
+    "default_probability": 0.2783,
+    "risk_category": "LOW",
+    "binary_prediction": 0,
+    "model_type": "XGBoost",
+    "confidence": 0.7217
+  },
+  "shap_top_factors": [
+    {
+      "feature": "PAY_0",
+      "shap_value": -0.5625,
+      "direction": "decreases_risk",
+      "abs_impact": 0.5625
+    },
+    {
+      "feature": "PAY_AMT6",
+      "shap_value": -0.3392,
+      "direction": "decreases_risk",
+      "abs_impact": 0.3392
+    },
+    {
+      "feature": "PAY_AMT2",
+      "shap_value": -0.3173,
+      "direction": "decreases_risk",
+      "abs_impact": 0.3173
+    },
+    {
+      "feature": "BILL_AMT3",
+      "shap_value": 0.2578,
+      "direction": "increases_risk",
+      "abs_impact": 0.2578
+    },
+    {
+      "feature": "BILL_AMT6",
+      "shap_value": 0.2323,
+      "direction": "increases_risk",
+      "abs_impact": 0.2323
+    }
+  ],
+  "policy_recommendation": "REVIEW",
+  "policy_violations": [
+    {
+      "rule": "Credit utilization too high",
+      "threshold": 0.8,
+      "actual": 1.0546,
+      "severity": "MEDIUM"
+    }
+  ],
+  "fairness_flag": "PASS - No significant gender bias detected",
+  "fairness_bias_detected": false,
+  "historical_default_rate": 0.0605,
+  "plots": {
+    "shap_plot": "shap_plot_record_3.html",
+    "fairness_plot": "fairness_plot_record_3.html"
+  }
+}

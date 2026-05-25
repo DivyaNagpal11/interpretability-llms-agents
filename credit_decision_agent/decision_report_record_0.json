@@ -1,0 +1,73 @@
+{
+  "record_index": 0,
+  "actual_default": 0,
+  "customer_profile": {
+    "credit_limit": 50000.0,
+    "sex": "Male",
+    "education": "University",
+    "marriage": "Single",
+    "age": 46,
+    "recent_payment_status": "Paid in full",
+    "payment_history": {
+      "month_1": "Paid in full",
+      "month_2": "Paid in full",
+      "month_3": "Paid in full"
+    },
+    "latest_bill_amount": 1540.0,
+    "latest_payment_amount": 26060.0,
+    "credit_utilization": 0.0308,
+    "total_bill_amounts": 36334.0,
+    "total_payment_amounts": 36457.0,
+    "missed_payments_count": 0
+  },
+  "risk_assessment": {
+    "tool": "predict_risk",
+    "timestamp": "2026-04-30T17:00:47.022822",
+    "default_probability": 0.4173,
+    "risk_category": "MEDIUM",
+    "binary_prediction": 1,
+    "model_type": "XGBoost",
+    "confidence": 0.5827
+  },
+  "shap_top_factors": [
+    {
+      "feature": "PAY_0",
+      "shap_value": -0.3973,
+      "direction": "decreases_risk",
+      "abs_impact": 0.3973
+    },
+    {
+      "feature": "LIMIT_BAL",
+      "shap_value": 0.2164,
+      "direction": "increases_risk",
+      "abs_impact": 0.2164
+    },
+    {
+      "feature": "BILL_AMT3",
+      "shap_value": -0.1723,
+      "direction": "decreases_risk",
+      "abs_impact": 0.1723
+    },
+    {
+      "feature": "BILL_AMT4",
+      "shap_value": 0.134,
+      "direction": "increases_risk",
+      "abs_impact": 0.134
+    },
+    {
+      "feature": "PAY_AMT2",
+      "shap_value": 0.1186,
+      "direction": "increases_risk",
+      "abs_impact": 0.1186
+    }
+  ],
+  "policy_recommendation": "APPROVE",
+  "policy_violations": [],
+  "fairness_flag": "PASS - No significant gender bias detected",
+  "fairness_bias_detected": false,
+  "historical_default_rate": 0.1935,
+  "plots": {
+    "shap_plot": "shap_plot_record_0.html",
+    "fairness_plot": "fairness_plot_record_0.html"
+  }
+}

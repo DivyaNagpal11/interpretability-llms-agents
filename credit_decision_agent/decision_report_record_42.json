@@ -1,0 +1,73 @@
+{
+  "record_index": 42,
+  "actual_default": 0,
+  "customer_profile": {
+    "credit_limit": 80000.0,
+    "sex": "Female",
+    "education": "University",
+    "marriage": "Married",
+    "age": 47,
+    "recent_payment_status": "Revolving credit used",
+    "payment_history": {
+      "month_1": "Revolving credit used",
+      "month_2": "Revolving credit used",
+      "month_3": "Paid in full"
+    },
+    "latest_bill_amount": 4762.0,
+    "latest_payment_amount": 1000.0,
+    "credit_utilization": 0.059525,
+    "total_bill_amounts": 9967.0,
+    "total_payment_amounts": 2970.0,
+    "missed_payments_count": 0
+  },
+  "risk_assessment": {
+    "tool": "predict_risk",
+    "timestamp": "2026-04-30T16:40:36.435411",
+    "default_probability": 0.4312,
+    "risk_category": "MEDIUM",
+    "binary_prediction": 1,
+    "model_type": "XGBoost",
+    "confidence": 0.5688
+  },
+  "shap_top_factors": [
+    {
+      "feature": "PAY_0",
+      "shap_value": -0.2599,
+      "direction": "decreases_risk",
+      "abs_impact": 0.2599
+    },
+    {
+      "feature": "PAY_AMT3",
+      "shap_value": 0.2167,
+      "direction": "increases_risk",
+      "abs_impact": 0.2167
+    },
+    {
+      "feature": "PAY_AMT5",
+      "shap_value": 0.1758,
+      "direction": "increases_risk",
+      "abs_impact": 0.1758
+    },
+    {
+      "feature": "PAY_AMT1",
+      "shap_value": 0.1551,
+      "direction": "increases_risk",
+      "abs_impact": 0.1551
+    },
+    {
+      "feature": "BILL_AMT4",
+      "shap_value": -0.1468,
+      "direction": "decreases_risk",
+      "abs_impact": 0.1468
+    }
+  ],
+  "policy_recommendation": "APPROVE",
+  "policy_violations": [],
+  "fairness_flag": "PASS - No significant gender bias detected",
+  "fairness_bias_detected": false,
+  "historical_default_rate": 0.1569,
+  "plots": {
+    "shap_plot": "shap_plot_record_42.html",
+    "fairness_plot": "fairness_plot_record_42.html"
+  }
+}
